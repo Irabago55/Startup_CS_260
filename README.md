@@ -12,6 +12,13 @@
 
 ![Billing and Addres Page](Images/IMG_0013.jpg)
 
+### Key Features
+- Tracking past purchases
+- Secure login through https
+- Real time data of stock per product
+- Real time data of how many people have the same product in their cart
+- Save information of what products are in each account holder's cart
+
 ### Technologies
 1. HTML will be used to create multiple pages that will include the home page, a products page, a cart page, and a billing and address page. Also to provide links to different websites or spots on the same page.
 2. CSS will be used to be able to color coordinate the page with the company's classic black and white look with supporitng colors to make the contrast pop. Along with ensuring there is good symmetry at all times.
