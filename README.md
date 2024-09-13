@@ -22,9 +22,8 @@
 ### Technologies
 1. HTML will be used to create multiple pages that will include the home page, a products page, a cart page, and a billing and address page. Also to provide links to different websites or spots on the same page.
 2. CSS will be used to be able to color coordinate the page with the company's classic black and white look with supporitng colors to make the contrast pop. Along with ensuring there is good symmetry at all times.
-3. Javascript will be used to allow users to scroll, and interact with different buttons on the website.
-4. React will be used to create things like search bars to make it more accessible for users to interact with the webpage.
-5. Backend service for retrieving information about previously purchased items for each individual with an account.
-6. Authentication will be set up by having users sign up with an email and password to create their own accounts.
-7. Databases will be used to not only store those accounts, but also to keep track of what a user might leave in their cart or past purchases they have made.
-8. Websocket data will be the real-time stock of each item as people are choosing to buy it or how many people have the same item in their cart.
+3. Javascript/React will be used to allow users to scroll, and interact with different buttons on the website.
+4. Backend service for retrieving information about previously purchased items for each individual with an account.
+5. Authentication will be set up by having users sign up with an email and password to create their own accounts.
+6. Databases will be used to not only store those accounts, but also to keep track of what a user might leave in their cart or past purchases they have made.
+7. Websocket data will be the real-time stock of each item as people are choosing to buy it or how many people have the same item in their cart.
