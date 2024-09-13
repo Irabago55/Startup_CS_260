@@ -4,7 +4,7 @@
 **At Beauty by EB, our mission is to provide the finest _all-natural_ beauty products that help our loyal clients not only look their best but feel _more confident_ every day. Whether you're seeking _thicker_, _fuller_ hair or a _radiant complexion_, we offer premium products at a fraction of the cost. Why pay more when you can have the best? Choose Beauty by EB and be _Eternamente Bella—beautiful, always._**
 
 ### Design
-![my design]./IMG_0010.jpg
+![Startup_CS_260]./IMG_0010.jpg
 
 ### Technologies
 1. HTML will be used to create multiple pages that will include the home page, a products page, a cart page, and a billing and address page. Also to provide links to different websites or spots on the same page.
