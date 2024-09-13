@@ -8,7 +8,7 @@
 
 ![Products Page](Images/IMG_0011.jpg)
 
-![Cart Page]()
+![Cart Page](Images/IMG_0012.jpg)
 
 ### Technologies
 1. HTML will be used to create multiple pages that will include the home page, a products page, a cart page, and a billing and address page. Also to provide links to different websites or spots on the same page.
