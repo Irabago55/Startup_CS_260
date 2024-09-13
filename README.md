@@ -10,6 +10,8 @@
 
 ![Cart Page](Images/IMG_0012.jpg)
 
+![Billing and Addres Page](Images/IMG_0013.jpg)
+
 ### Technologies
 1. HTML will be used to create multiple pages that will include the home page, a products page, a cart page, and a billing and address page. Also to provide links to different websites or spots on the same page.
 2. CSS will be used to be able to color coordinate the page with the company's classic black and white look with supporitng colors to make the contrast pop. Along with ensuring there is good symmetry at all times.
