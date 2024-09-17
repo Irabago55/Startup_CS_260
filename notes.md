@@ -13,5 +13,6 @@
 2. To display audio you use the "audio" element with the "src" attribute that takes the url. If you add the "controls" element it allows the user to control the audio (which is preferred). The "autoplay" attribute plays it as soon as it loads, and the "loop" attribute plays is over and over (discouraged unless user has the option to opt into the action).
 3. To display a video you use the "video" elements and it has the same rules with the "src", "autoplay", and "loop" attributes as the audio.
    a. You may need to include the "crossorigin="anonymous"" if you're requesting files from a different domain than the one serving the content.
+   
    b. You can also provide a width (and I assume a height) attribute to the video.
-4. 
+5. 
