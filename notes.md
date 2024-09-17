@@ -8,3 +8,5 @@
 5. "git push" will send those changes back to my github
 
 ## HTML Notes
+
+1. 
