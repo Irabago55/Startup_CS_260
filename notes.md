@@ -1,3 +1,4 @@
+# Git Commands
 1. **Putting 2 astericks on each side of the text will make it bold**
 2. Successive # from 1-3 will make headers (1 being the largest size and 3 the smallest)
 3. "git pull" in the terminal will pull the latest github version I have
