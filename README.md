@@ -30,12 +30,12 @@
 
 ### HTML Deliverable
 
--[x] HTML Pages for each component of my startup
--[] Properly use HTML tags including body, nav, main, header, and footer
--[x] Links between pages as necessary
--[] Website has textual content
--[] Placeholder for 3rd party service calls
--[x] Application images
--[x] Login placeholder, indluding user name display
--[] Database data placeholder showing content stored in the database
--[] WebSocket data placeholder showing where realtime communication will go
+- [x] HTML Pages: I have a index, login, products, cart, and billing page
+- [] Properly use HTML tags: I used each tag at least once, along with other ones
+- [x] Links between pages as necessary: Each page has links as neccesary to get from page to page
+- [] Website has textual content: 
+- [] Placeholder for 3rd party service calls: 
+- [x] Application images: I have an image of one of the products when in the cart
+- [x] Login placeholder with username display: I have a login page where you can put in your information
+- [] Database data placeholder:
+- [] WebSocket data placeholder:
