@@ -29,3 +29,13 @@
 7. Websocket data will be the real-time stock of each item as people are choosing to buy it or how many people have the same item in their cart.
 
 ### HTML Deliverable
+
+-[x] HTML Pages for each component of my startup
+-[] Properly use HTML tags including body, nav, main, header, and footer
+-[x] Links between pages as necessary
+-[] Website has textual content
+-[] Placeholder for 3rd party service calls
+-[x] Application images
+-[x] Login placeholder, indluding user name display
+-[] Database data placeholder showing content stored in the database
+-[] WebSocket data placeholder showing where realtime communication will go
