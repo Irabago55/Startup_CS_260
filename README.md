@@ -27,3 +27,5 @@
 5. Authentication will be set up by having users sign up with an email and password to create their own accounts.
 6. Databases will be used to not only store those accounts, but also to keep track of what a user might leave in their cart or past purchases they have made.
 7. Websocket data will be the real-time stock of each item as people are choosing to buy it or how many people have the same item in their cart.
+
+### HTML Deliverable
