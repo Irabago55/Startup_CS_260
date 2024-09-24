@@ -34,7 +34,7 @@
 - [ ] Properly use HTML tags: I used each tag at least once, along with other ones
 - [x] Links between pages as necessary: Each page has links as neccesary to get from page to page
 - [x] Website has textual content: 
-- [ ] Placeholder for 3rd party service calls: 
+- [x] Placeholder for 3rd party service calls: 
 - [x] Application images: I have an image of one of the products when in the cart
 - [x] Login placeholder with username display: I have a login page where you can put in your information
 - [ ] Database data placeholder:
