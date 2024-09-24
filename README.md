@@ -37,5 +37,5 @@
 - [x] Placeholder for 3rd party service calls: 
 - [x] Application images: I have an image of one of the products when in the cart
 - [x] Login placeholder with username display: I have a login page where you can put in your information
-- [ ] Database data placeholder:
+- [x] Database data placeholder:
 - [ ] WebSocket data placeholder:
