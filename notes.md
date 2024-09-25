@@ -1,4 +1,4 @@
-# Notes
+d# Notes
 
 ## Git Commands
 1. **Putting 2 astericks on each side of the text will make it bold**
@@ -15,4 +15,8 @@
    a. You may need to include the "crossorigin="anonymous"" if you're requesting files from a different domain than the one serving the content.
    
    b. You can also provide a width (and I assume a height) attribute to the video.
-4. 
+4. cdc
+
+## CSS Notes
+
+1. If you have an id in your html you reference it in css by saying #(id name)
