@@ -1,3 +1,9 @@
+header {
+    background-color: rgb(55, 53, 53);
+    color: white;
+    
+}
+
 .navigation {
   display: flex;           /* Use flexbox to align items */
   justify-content: space-between; /* Spread elements to both sides */
@@ -26,7 +32,7 @@ nav ul {
 /* Style individual links */
 nav ul li a {
   text-decoration: none;   /* Remove underline from links */
-  color: black;            /* Set the text color */
+  color: white;            /* Set the text color */
   font-weight: bold;       /* Make the links bold */
 }
 
