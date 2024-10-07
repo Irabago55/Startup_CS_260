@@ -60,7 +60,7 @@
         align-items: flex-start;
     }
 
-    .footer li {
+    .footer li{
         padding: 10px 0;
     }
 
@@ -85,9 +85,14 @@ footer div ul li a {
     padding: 20px;
   }
   
+  strong {
+    border-bottom: solid white thin;
+  }
+
   /* Style each section of the footer */
   .footer li {
     padding: 0 20px;
+    padding-bottom: 20 px;
   }
   
   /* Style the social media section to display links in a column */
