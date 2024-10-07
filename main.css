@@ -101,3 +101,84 @@ footer div ul li a {
     flex-direction: column; /* Stack links vertically */
   }
 
+
+
+   /* Basic styling for the carousel container */
+.carousel {
+    position: relative;
+    width: 100%;
+    max-width: 600px;   /* Adjust to your desired width */
+    margin: 0 auto;     /* Center the carousel */
+    overflow: hidden;   /* Hide overflow to only show one image at a time */
+  }
+  
+  /* Styling for each carousel item */
+  .carousel-inner {
+    display: flex;
+    width: 300%;          /* Total width of all slides combined */
+    transition: transform 0.5s ease; /* Smooth transition between slides */
+  }
+  
+  /* Each individual image container */
+  .carousel-item {
+    flex: 1 0 100%;       /* Each slide takes 100% of the width */
+    position: relative;
+  }
+  
+  /* Make the images fill the container */
+  .carousel-item img {
+    width: 100%;
+    display: block;
+  }
+  
+  /* Hide radio buttons */
+  input[type="radio"] {
+    display: none;
+  }
+  
+  /* Navigation controls (dots) */
+  .carousel-controls {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 10px;
+  }
+  
+  /* Style for the dots */
+  .carousel-dot {
+    width: 10px;
+    height: 10px;
+    background-color: white;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  /* Highlight dot when selected */
+  input#img1:checked ~ .carousel-controls label[for="img1"],
+  input#img2:checked ~ .carousel-controls label[for="img2"],
+  input#img3:checked ~ .carousel-controls label[for="img3"] {
+    background-color: gray;
+  }
+  
+  /* Positioning based on checked radio buttons */
+  input#img1:checked ~ .carousel-inner {
+    transform: translateX(0%);
+  }
+  input#img2:checked ~ .carousel-inner {
+    transform: translateX(-100%);
+  }
+  input#img3:checked ~ .carousel-inner {
+    transform: translateX(-200%);
+  }
+  
+  /* Optional: Add automatic transitions */
+  @keyframes carouselAutoSlide {
+    0% { transform: translateX(0%); }
+    33% { transform: translateX(-100%); }
+    66% { transform: translateX(-200%); }
+    100% { transform: translateX(0%); }
+  }
+  
