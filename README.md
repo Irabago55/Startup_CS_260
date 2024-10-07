@@ -39,3 +39,12 @@
 - [x] Login placeholder with username display: I have a login page where you can put in your information
 - [x] Database data placeholder: Keep track of login information, and cart items/previous purchases
 - [x] WebSocket data placeholder: Gives live updates of stock of items in cart, number of people with same products in their cart, and number of purchases of those items every minute they stay in the cart.
+
+### CSS Deliverable
+
+- [ ] Header, footer, and main content body
+- [ ] Navigation elements
+- [ ] Responsive to window resizing
+- [ ] Application elements
+- [ ] Application text content
+- [ ] Application images
