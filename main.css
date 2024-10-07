@@ -51,11 +51,18 @@
       gap: 15px;                         /* Reduce the gap between items for smaller screens */
       flex-wrap: wrap;                   /* Allow the items to wrap */
     }
+
+    .footer {
+        justify-content: flex-start;
+        gap: 15px;
+        flex-wrap: wrap;
+    }
+
   }
 
   .footer {
     background-color: rgb(55, 53, 53);
+    color: white;
     padding: 0.3em;
-    text-align: center;
     list-style-type: none;
   }
