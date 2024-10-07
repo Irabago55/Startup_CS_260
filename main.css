@@ -56,26 +56,43 @@
         justify-content: flex-start;
         gap: 15px;
         flex-wrap: wrap;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .footer li {
+        padding: 10px 0;
     }
 
   }
 
-  footer div ul li a{
+/* Style for footer links */
+footer div ul li a {
     text-decoration: none;
     color: white;
+    display: block; /* Ensure links are displayed in block form for easier stacking */
+    margin-top: 5px; /* Add space between the links */
   }
-
-  footer div ul li {
-    border-bottom: solid white thin; 
-  }
-
+  
   .footer {
     background-color: rgb(55, 53, 53);
     color: white;
     padding: 0.3em;
     list-style-type: none;
     display: flex;
-    justify-content: space-between;     
-    align-items: center;                
-    padding: 20px;  
+    justify-content: space-between; /* Spread the GitHub, Social Media, and Email sections */
+    align-items: flex-start; /* Align items at the top for consistency */
+    padding: 20px;
   }
+  
+  /* Style each section of the footer */
+  .footer li {
+    padding: 0 20px;
+  }
+  
+  /* Style the social media section to display links in a column */
+  .footer .social_media {
+    display: flex;
+    flex-direction: column; /* Stack links vertically */
+  }
+
