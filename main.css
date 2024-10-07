@@ -60,9 +60,22 @@
 
   }
 
+  footer div ul li a{
+    text-decoration: none;
+    color: white;
+  }
+
+  footer div ul li {
+    border-bottom: solid white thin; 
+  }
+
   .footer {
     background-color: rgb(55, 53, 53);
     color: white;
     padding: 0.3em;
     list-style-type: none;
+    display: flex;
+    justify-content: space-between;     
+    align-items: center;                
+    padding: 20px;  
   }
