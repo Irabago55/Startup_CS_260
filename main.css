@@ -1,0 +1,44 @@
+.navigation {
+  display: flex;           /* Use flexbox to align items */
+  justify-content: space-between; /* Spread elements to both sides */
+  align-items: center;     /* Vertically align the items */
+  padding: 0.3em;           /* Add some padding around the navigation */
+  flex-wrap: wrap;         /* Allow wrapping when the screen is too small */
+}
+
+/* Style the h1 (top left) */
+.top_left {
+  font-weight: bold;       /* Make the text bold */
+  padding-left: 0.3em;      /* Add padding to the left */
+  flex-shrink: 1;          /* Allow h1 to shrink if necessary */
+}
+
+/* Style the navigation list (top right) */
+nav ul {
+  list-style-type: none;   /* Remove bullet points */
+  margin: 0;               /* Remove default margin */
+  padding: 0;              /* Remove default padding */
+  display: flex;           /* Flexbox for horizontal alignment */
+  gap: 20px;               /* Space evenly between the list items */
+  flex-wrap: wrap;         /* Ensure items wrap on small screens */
+}
+
+/* Style individual links */
+nav ul li a {
+  text-decoration: none;   /* Remove underline from links */
+  color: black;            /* Set the text color */
+  font-weight: bold;       /* Make the links bold */
+}
+
+/* Media query for smaller screens */
+@media (max-width: 768px) {
+  .navigation {
+    flex-direction: column; /* Stack the h1 and nav vertically on smaller screens */
+    align-items: flex-start; /* Align to the start instead of center */
+  }
+
+  nav ul {
+    justify-content: flex-start; /* Align the nav items to the left on small screens */
+    gap: 10px;                   /* Reduce the gap between items for smaller screens */
+  }
+}
