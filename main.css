@@ -64,6 +64,20 @@
         padding: 10px 0;
     }
 
+    .mission-section {
+      margin-top: 10px;      /* Reduce spacing on smaller screens */
+      padding: 10px;         /* Ensure text padding is still readable */
+    }
+
+    .carousel-inner img {
+      max-height: 300px;     /* Adjust the height for smaller screens */
+    }
+
+    .carousel-control-prev,
+    .carousel-control-next {
+        width: 8%;            /* Increase the control size for smaller screens */
+    }
+
   }
 
 /* Style for footer links */
@@ -101,12 +115,25 @@ footer div ul li a {
     flex-direction: column; /* Stack links vertically */
   }
 
+
+/* Center the carousel control arrows */
+.carousel-control-prev,
+.carousel-control-next {
+    position: absolute;
+    top: 50%;                   /* Center vertically */
+    transform: translateY(-50%); /* Ensure the arrows are aligned even when resized */
+    z-index: 1;                 /* Keep them above the image */
+    background-color: rgba(0, 0, 0, 0.5); /* Optional: Add background to make them stand out */
+    width: 5%;                  /* Adjust width to your liking */
+}
+
   /* Change the color of the previous/next arrows */
   .carousel-control-prev-icon,
   .carousel-control-next-icon {
     background-color: black;  /* Set the arrow color to white (or any color you prefer) */
     border-radius: 50%;         /* Optional: make the arrow buttons round */
-    padding: 10px;              /* Optional: add some padding to make the icon larger */
+    width: 30px;
+    height: 30px;
   }
 
   /* Hide the carousel indicators */
@@ -114,8 +141,10 @@ footer div ul li a {
   display: none;
 }
 
-.carousel-inner {
-  height: 1000px;
+.carousel-inner img{
+  width: 100%;
+  height: auto;              /* Make sure the image resizes while keeping the aspect ratio */
+  max-height: 1000px;
 }
 
 .carousel-item img {
@@ -153,5 +182,26 @@ h3 {
   color: #333;                       /* Darker italic text for emphasis */
 }
 
+/* Adjust padding for the "Our Mission" section */
+h3, p {
+  margin: 0;               /* Reset default margins */
+  padding: 10px 20px;       /* Add padding for readability */
+  text-align: center;       /* Center the text */
+}
+
+/* Reduce space between sections */
+.carousel {
+  margin-bottom: 20px;      /* Reduce space between the carousel and the next section */
+}
+
+.mission-section {
+  margin-top: 20px;         /* Reduce space between "Our Mission" and the carousel */
+  margin-bottom: 0;         /* Avoid unnecessary margin */
+}
+
+/* Ensure the container has consistent padding */
+.container {
+  padding: 0 20px;          /* Add padding to keep spacing uniform */
+}
 
   
