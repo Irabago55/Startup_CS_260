@@ -114,6 +114,16 @@ footer div ul li a {
   display: none;
 }
 
+.carousel-inner {
+  height: 1000px;
+}
+
+.carousel-item img {
+  height: 100%; /* Make sure the image takes up 100% of the carousel's height */
+  width: auto; /* Maintain the aspect ratio */
+  object-fit: cover; /* Cover the entire height without stretching */
+}
+
 
 
   
