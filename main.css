@@ -101,6 +101,19 @@ footer div ul li a {
     flex-direction: column; /* Stack links vertically */
   }
 
+  /* Change the color of the previous/next arrows */
+  .carousel-control-prev-icon,
+  .carousel-control-next-icon {
+    background-color: black;  /* Set the arrow color to white (or any color you prefer) */
+    border-radius: 50%;         /* Optional: make the arrow buttons round */
+    padding: 10px;              /* Optional: add some padding to make the icon larger */
+  }
+
+  /* Hide the carousel indicators */
+.carousel-indicators {
+  display: none;
+}
+
 
 
   
