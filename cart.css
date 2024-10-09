@@ -111,4 +111,75 @@ footer div ul li a {
     flex-direction: column; /* Stack links vertically */
   }
 
-    
+   main {
+    display: flex;
+    justify-content: space-around;
+    padding: 20px;
+   }
+
+   .cart {
+    width: 40%;
+   }
+
+   .cart-item {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    border-bottom: 1px solid #ccc;
+   }
+
+   .product-img img{
+    width: 100px;
+    height: 100px;
+   }
+
+   .product-info {
+    padding-left: 20px;
+   }
+
+   .cancel-button {
+    background-color: red;
+    color: white;
+    padding: 5px 10px;
+    border: none;
+    cursor: pointer;
+   }
+
+   .shipping {
+    margin-top: 20px;
+   }
+
+   .summary {
+    width: 30%;
+    border: 1px solid #ccc;
+    padding: 20px;
+   }
+
+   .summary p {
+    display: flex;
+    justify-content: space-between;
+   }
+
+   .checkout .paypal {
+    background-color: #000;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    margin-top: 10px;
+   }
+
+   .suggestions {
+    width: 20%;
+   }
+
+   .suggested-item {
+    text-align: center;
+    padding: 10px;
+   }
+
+   .suggested-item img {
+    width: 100px;
+    height: 100px;
+   }
