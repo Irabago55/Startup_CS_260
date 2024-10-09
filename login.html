@@ -37,7 +37,9 @@
                         <a href="#"> Forgot password?</a>
                     </div>
 
-                    <button type="submit" class="btn">Login</button>
+                    <button type="submit" class="btn">
+                        <a href="index.html">Login</a>   <!-- Might have to use an id tag instead of the a tag to be able to reference the Login button to check if the user correctly filled out the form before submitting-->
+                    </button>
 
                     <div class="register-link">
                         <p>Don't have an account? <a href="#">Register</a></p>
@@ -45,26 +47,7 @@
                 </form>
             </div>
         </div>
-        <!-- <main>
-            <h3>Login/Sign Up</h3>
-            <ul>
-                <li>
-                    <label for="text">Full Name: </label>
-                    <input type="text" id="text" name="varText" placeholder="Your Name Here*" required pattern="[Aa].*" />
-                </il>
-                <li>
-                    <label for="text">Email: </label>
-                    <input type="text" id="text" name="varText" placeholder="Email*" required pattern="[Aa].*" />
-                </li>
-                <li>
-                    <label for="password">Password: </label>
-                    <input type="password" id="password" name="varPassword" placeholder="Password*"/>
-                </li>
-            </ul>
-            <a href="index.html">
-                <button type="submit">Submit</button>
-            </a>
-        </main>
+        <!-- 
         <p>
             The following text will be data stored in the database behind the scenes<br>
             Full name: John Doe<br>

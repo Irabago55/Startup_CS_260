@@ -20,6 +20,8 @@ html, body {
     font-weight: bold;                  /* Make the text bold */
     padding-left: 0.3em;                 /* Add padding to the left */
     color: white;                       /* Ensure the h1 text is visible on dark background */
+    font-size: 38px;
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   }
   
   /* Style the navigation list (top right) */
@@ -29,6 +31,7 @@ html, body {
     padding: 0;                         /* Remove default padding */
     display: flex;                      /* Flexbox for horizontal alignment */
     gap: 30px;                          /* Space evenly between the list items */
+    font-size: large;
   }
   
   /* Style individual links */

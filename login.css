@@ -23,7 +23,7 @@ html, body {
 
 .wrapper {
     width: 420px;
-    background: black;  /*I can change the color to transparent to blend with the photo in the back */
+    background: rgb(55, 53, 53);  /*I can change the color to transparent to blend with the photo in the back */
     /*border: 2px solid rgba (255, 255, 255, 0.2); */
     /*backdrop-filter: blur(20px); */
     /*box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); */
@@ -104,6 +104,15 @@ html, body {
     font-weight: 600;
 }
 
+.wrapper .btn a {
+    text-decoration: none;
+    color: rgb(55, 53, 53);
+}
+
+.wrapper .btn a:hover {
+    text-decoration: underline;
+}
+
 .wrapper .register-link {
     font-size: 14.5px;
     text-align: center;
@@ -128,11 +137,15 @@ html, body {
     padding: 0.3em;                      /* Add padding around the content */
     background-color: rgb(55, 53, 53);  /* Set the background color */
     color: white;                       /* Text color for better contrast */
+    padding-top: 4.5px;
+    padding-bottom: 12px;
   }
   
   /* Style the h1 (top left) */
   .top_left {
     font-weight: bold;                  /* Make the text bold */
+    font-size: 38px;
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
     padding-left: 0.3em;                 /* Add padding to the left */
     color: white;                       /* Ensure the h1 text is visible on dark background */
   }
@@ -144,6 +157,7 @@ html, body {
     padding: 0;                         /* Remove default padding */
     display: flex;                      /* Flexbox for horizontal alignment */
     gap: 30px;                          /* Space evenly between the list items */
+    padding-top: 7px;
   }
   
   /* Style individual links */
@@ -151,6 +165,7 @@ html, body {
     text-decoration: none;              /* Remove underline from links */
     color: white;                       /* White text color for contrast */
     font-weight: bold;                  /* Make the links bold */
+    font-size: large;
     padding: 10px 15px;                 /* Add padding inside each link for spacing */
     transition: background-color 0.3s;  /* Smooth transition on hover */
   }
