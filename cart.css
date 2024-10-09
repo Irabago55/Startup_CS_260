@@ -139,10 +139,18 @@ footer div ul li a {
 
    .cancel-button {
     background-color: red;
-    color: white;
     padding: 5px 10px;
     border: none;
     cursor: pointer;
+   }
+
+   .cancel-button a {
+    text-decoration: none;
+    color: white;
+   }
+
+   .cancel-button a:hover {
+    text-decoration: underline;
    }
 
    .shipping {
