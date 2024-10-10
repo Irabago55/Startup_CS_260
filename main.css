@@ -39,6 +39,7 @@ html, body {
     text-decoration: none;              /* Remove underline from links */
     color: white;                       /* White text color for contrast */
     font-weight: bold;                  /* Make the links bold */
+    font-size: large;
     padding: 10px 15px;                 /* Add padding inside each link for spacing */
     transition: background-color 0.3s;  /* Smooth transition on hover */
   }
