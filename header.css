@@ -1,9 +1,3 @@
-html, body {
-    height: 100%;
-    margin: 0;
-    padding: 0;
-}
-
 /* Style the header container with a background color */
 .navigation {
     display: flex;                      /* Align items horizontally */
@@ -12,16 +6,15 @@ html, body {
     padding: 0.3em;                      /* Add padding around the content */
     background-color: rgb(55, 53, 53);  /* Set the background color */
     color: white;                       /* Text color for better contrast */
-    
   }
   
   /* Style the h1 (top left) */
   .top_left {
     font-weight: bold;                  /* Make the text bold */
-    font-size: 38px;
-    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
     padding-left: 0.3em;                 /* Add padding to the left */
     color: white;                       /* Ensure the h1 text is visible on dark background */
+    font-size: 38px;
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   }
   
   /* Style the navigation list (top right) */
@@ -31,7 +24,7 @@ html, body {
     padding: 0;                         /* Remove default padding */
     display: flex;                      /* Flexbox for horizontal alignment */
     gap: 30px;                          /* Space evenly between the list items */
-    padding-top: 7px;
+    font-size: large;
   }
   
   /* Style individual links */
@@ -39,7 +32,6 @@ html, body {
     text-decoration: none;              /* Remove underline from links */
     color: white;                       /* White text color for contrast */
     font-weight: bold;                  /* Make the links bold */
-    font-size: large;
     padding: 10px 15px;                 /* Add padding inside each link for spacing */
     transition: background-color 0.3s;  /* Smooth transition on hover */
   }
@@ -74,141 +66,4 @@ html, body {
     .footer li{
         padding: 10px 0;
     }
-
-}
-
-/* Style for footer links */
-footer div ul li a {
-    text-decoration: none;
-    color: white;
-    display: block; /* Ensure links are displayed in block form for easier stacking */
-    margin-top: 5px; /* Add space between the links */
   }
-  
-  .footer {
-    background-color: rgb(55, 53, 53);
-    color: white;
-    padding: 0.3em;
-    list-style-type: none;
-    display: flex;
-    justify-content: space-between; /* Spread the GitHub, Social Media, and Email sections */
-    align-items: flex-start; /* Align items at the top for consistency */
-    padding: 20px;
-  }
-  
-  strong {
-    border-bottom: solid white thin;
-  }
-
-  /* Style each section of the footer */
-  .footer li {
-    padding: 0 20px;
-    padding-bottom: 20 px;
-  }
-  
-  /* Style the social media section to display links in a column */
-  .footer .social_media {
-    display: flex;
-    flex-direction: column; /* Stack links vertically */
-  }
-
-   main {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    padding: 20px;
-    }
-
-   .cart {
-    width: 40%;
-   }
-
-   .cart-item {
-    display: flex;
-    justify-content: space-between;
-    padding: 20px;
-    border-bottom: 1px solid #ccc;
-   }
-
-   .product-img img{
-    width: 100px;
-    height: 100px;
-   }
-
-   .product-info {
-    padding-left: 20px;
-   }
-
-   .cancel-button {
-    background-color: red;
-    padding: 5px 10px;
-    border: none;
-    cursor: pointer;
-   }
-
-   .cancel-button a {
-    text-decoration: none;
-    color: white;
-   }
-
-   .cancel-button a:hover {
-    text-decoration: underline;
-   }
-
-   .shipping {
-    margin-top: 20px;
-   }
-
-   .summary {
-    width: 30%;
-    border: 1px solid #ccc;
-    padding: 20px;
-   }
-
-   .summary p {
-    display: flex;
-    justify-content: space-between;
-   }
-
-   .checkout, .paypal {
-    background-color: rgb(55, 53, 53);
-    color: white;
-    padding: 10px 20px;
-    border: none;
-    cursor: pointer;
-    width: 100%;
-    margin-top: 10px;
-
-   }
-
-   .checkout a {
-    text-decoration: none;
-    color: white;
-    }
-    
-    .paypal a {
-      text-decoration: none;
-      color: white;
-    }
-   
-   .checkout a:hover {
-    text-decoration: underline;
-   }
-
-   .paypal a:hover {
-    text-decoration: underline;
-   }
-
-   .suggestions {
-    width: 20%;
-   }
-
-   .suggested-item {
-    text-align: center;
-    padding: 10px;
-   }
-
-   .suggested-item img {
-    width: 100px;
-    height: 100px;
-   }
