@@ -176,6 +176,16 @@ footer div ul li a {
     cursor: pointer;
     width: 100%;
     margin-top: 10px;
+
+   }
+
+   .checkout .paypal a {
+    text-decoration: none;
+    color: white;
+    }
+   
+   .checkout .paypal a:hover {
+    text-decoration: underline;
    }
 
    .suggestions {
