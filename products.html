@@ -1,46 +1,105 @@
 <!DOCTYPE html>
-<html>
-    <head>
-        <link rel="stylesheet" href="products.css" />
-    </head>
-    <body>
-        <header>
-            <nav class="navigation">
-                <h1 class="top_left">Beauty By EB</h1>
-                <ul class="top_right">
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="products.html">Products</a></li>
-                    <li><a href="cart.html">Your Cart</a></li>
-                    <li><a href="#contact_info">Contact</a></li>
-                </ul>
-            </nav>
-        </header>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Products</title>
+    <link rel="stylesheet" href="products.css">
+</head>
+<body>
+    <header>
+        <nav class="navigation">
+            <h1>Beauty By EB</h1>
+            <ul class="top_right">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="products.html">Products</a></li>
+                <li><a href="cart.html">Cart</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Hamburger menu icon placed under the header -->
+    <div class="hamburger_container">
+        <div class="hamburger_menu" onclick="toggleSidebar()">&#9776;</div>
+    </div>
+
+    <div class="content_wrapper">
+        <div class="sidebar" id="sidebar">
+            <div class="filter_section">
+                <h3>Filters</h3>
+                <div class="filter_price">
+                    <label>Price</label>
+                    <input type="range" min="0" max="1000" value="500">
+                </div>
+                <div class="filter_products">
+                    <h4>Products</h4>
+                    <ul>
+                        <li><input type="checkbox" id="all" checked> All</li>
+                        <li><input type="checkbox" id="oils"> Oils</li>
+                        <li><input type="checkbox" id="face_cream"> Face Cream</li>
+                        <li><input type="checkbox" id="gummies"> Gummies</li>
+                    </ul>
+                </div>
+                <div class="filter_ratings">
+                    <h4>Ratings</h4>
+                    <ul>
+                        <li><input type="checkbox" id="all_ratings" checked> All</li>
+                        <li>★★★★★</li>
+                        <li>★★★★☆</li>
+                        <li>★★★☆☆</li>
+                        <li>★★☆☆☆</li>
+                        <li>★☆☆☆☆</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
         <main>
-            <p>Here the different products, prices, and filters to help users find what they want will be</p>
+            <div class="product_listing">
+                <div class="product_card">
+                    <div class="product_image">Product Image</div>
+                    <div class="product_description">
+                        <h3>Product Name</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit...</p>
+                        <div class="rating">★★★★★</div>
+                        <div class="price">$49.99 <span class="old_price">$59.99</span></div>
+                        <button>Add to Cart</button>
+                    </div>
+                </div>
+                <!-- Repeat for other products -->
+            </div>
         </main>
-        <footer>
-            <div>
-              <ul class="footer" id="contact_info">
+    </div>
+
+    <footer>
+        <div>
+            <ul class="footer" id="contact_info">
                 <li class="github">
-                  <strong>Github</strong>
-                  <!-- GitHub link -->
-                  <a href="https://github.com/your-profile" target="_blank">Visit our GitHub</a>
+                    <strong>Github</strong>
+                    <a href="https://github.com/your-profile" target="_blank">Visit our GitHub</a>
                 </li>
                 <li class="social_media">
-                  <strong>Follow us</strong>
-                  <!-- Social media links -->
-                  <a href="https://www.facebook.com/profile.php?id=100063623010158" target="_blank">Facebook</a><br>
-                  <a href="https://www.tiktok.com/@beautybyeb" target="_blank">TikTok</a><br>
-                  <a href="https://www.instagram.com/original_beautyeb/" target="_blank">Instagram</a>
+                    <strong>Follow us</strong>
+                    <a href="https://www.facebook.com/profile.php?id=100063623010158" target="_blank">Facebook</a><br>
+                    <a href="https://www.tiktok.com/@beautybyeb" target="_blank">TikTok</a><br>
+                    <a href="https://www.instagram.com/original_beautyeb/" target="_blank">Instagram</a>
                 </li>
                 <li class="email">
-                  <strong>Email</strong>
-                  <!-- Email link -->
-                  <a href="mailto:info@beautybyeb.com">info@beautybyeb.com</a>
+                    <strong>Email</strong>
+                    <a href="mailto:info@beautybyeb.com">info@beautybyeb.com</a>
                 </li>
-              </ul>
-            </div>
-          </footer>
-    </body>
+            </ul>
+        </div>
+    </footer>
+
+    <script>
+        function toggleSidebar() {
+            const sidebar = document.getElementById("sidebar");
+            sidebar.classList.toggle("visible");
+        }
+    </script>
+</body>
 </html>
+
 
