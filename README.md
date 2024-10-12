@@ -44,7 +44,7 @@
 
 - [x] Header, footer, and main content body
 - [x] Navigation elements: I added lots of links to navigate through the different pages and styled them to look more professional
-- [ ] Responsive to window resizing
-- [ ] Application elements
+- [x] Responsive to window resizing: Each window can resize appropriately and cleanly for a small screen
+- [x] Application elements: I used good contrast of white spaces with my css styling elements
 - [x] Application text content: Used text throughout the pages like in the home page
 - [x] Application images: Used product images and an image carousel
