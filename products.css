@@ -105,11 +105,27 @@ body {
   padding: 15px;
 }
 
-.product_image {
+/* .product_image {
   flex: 1;
   background-color: #eee;
   height: 150px;
   margin-right: 20px;
+} */
+
+.product_card img {
+  padding-right: 15px;
+}
+
+.filter_price {
+  padding-bottom: 15px;
+}
+
+.filter_products h4 {
+  padding-bottom: 15px;
+}
+
+.filter_ratings h4 {
+  padding-bottom: 15px;
 }
 
 .product_description {
