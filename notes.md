@@ -20,3 +20,7 @@ d# Notes
 ## CSS Notes
 
 1. If you have an id in your html you reference it in css by saying #(id name)
+
+## Vite & React Notes
+
+1. Use "npm run dev" to host the website to see changes live
