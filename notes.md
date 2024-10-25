@@ -24,3 +24,4 @@ d# Notes
 ## Vite & React Notes
 
 1. Use "npm run dev" to host the website to see changes live
+2. A component in JSX (React) is a function that returns something to the DOM which basically means it renders (changes) something on the screen
