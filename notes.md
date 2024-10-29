@@ -27,3 +27,4 @@ d# Notes
 2. A component in JSX (React) is a function that returns something to the DOM which basically means it renders (changes) something on the screen
 3. An event listener is something that waits for an event to occur in javascript and then responds to it
 4. In JS/JSX {} curly braces destruct an object while [] square brackets destructure an array
+5. When a function says "default" it's a keyword that tells other files that use your code that this is the main function in your file.
