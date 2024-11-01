@@ -29,3 +29,7 @@ d# Notes
 4. In JS/JSX {} curly braces destruct an object while [] square brackets destructure an array
 5. When a function says "default" it's a keyword that tells other files that use your code that this is the main function in your file.
 6. Importing 'react-dom/client' allows your code to talk to the web browsers (React DOM) to be able to render your code
+
+## API's
+
+1. Use public APIs: https://rapidapi.com/hub
