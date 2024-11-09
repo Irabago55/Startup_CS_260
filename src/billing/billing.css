@@ -1,0 +1,125 @@
+/* Billing Page Container */
+.billing-container {
+    max-width: 600px;
+    margin: 2rem auto;
+    padding: 2rem;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .billing-container h2 {
+    color: #333;
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    border-bottom: 2px solid #e0e0e0;
+    padding-bottom: 0.5rem;
+  }
+  
+  /* Form Styling */
+  .billing-container form > div {
+    margin-bottom: 1rem;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .billing-container label {
+    font-weight: bold;
+    color: #555;
+    margin-bottom: 0.5rem;
+  }
+  
+  .billing-container input[type="text"],
+  .billing-container input[type="email"],
+  .billing-container input[type="tel"] {
+    padding: 0.75rem;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    transition: border-color 0.3s;
+  }
+  
+  .billing-container input:focus {
+    border-color: #007bff;
+    outline: none;
+  }
+  
+  /* Order Summary Styling */
+  .order-summary {
+    margin-top: 2rem;
+    padding: 1rem;
+    background-color: #fff;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+  }
+  
+  .order-item {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 1rem;
+  }
+  
+  .order-item p {
+    margin: 0;
+    color: #333;
+  }
+  
+  .order-summary p,
+  .order-summary h3 {
+    margin: 0.5rem 0;
+    color: #333;
+  }
+  
+  .order-summary h3 {
+    font-weight: bold;
+  }
+  
+  /* Billing Actions */
+  .billing-actions {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 2rem;
+  }
+  
+  .billing-actions button {
+    padding: 0.75rem 1.5rem;
+    font-size: 1rem;
+    color: #fff;
+    background-color: #007bff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .billing-actions button:hover {
+    background-color: #0056b3;
+  }
+  
+  .billing-actions button[type="button"] {
+    background-color: #6c757d;
+  }
+  
+  .billing-actions button[type="button"]:hover {
+    background-color: #5a6268;
+  }
+ 
+.billing-container input[type="text"],
+.billing-container input[type="email"],
+.billing-container input[type="tel"],
+.billing-container input[type="number"],
+.billing-container input[type="date"] {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 1rem;
+}
+
+.billing-container input[type="text"]:invalid,
+.billing-container input[type="email"]:invalid,
+.billing-container input[type="tel"]:invalid,
+.billing-container input[type="number"]:invalid,
+.billing-container input[type="date"]:invalid {
+    border-color: red;
+} 

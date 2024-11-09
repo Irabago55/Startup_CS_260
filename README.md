@@ -4,13 +4,13 @@
 **At Beauty by EB, our mission is to provide the finest _all-natural_ beauty products that help our loyal clients not only look their best but feel _more confident_ every day. Whether you're seeking _thicker_, _fuller_ hair or a _radiant complexion_, we offer premium products at a fraction of the cost. Why pay more when you can have the best? Choose Beauty by EB and be _Eternamente Bella—beautiful, always._**
 
 ### Design
-![Home Page](Images/IMG_0010.jpg)
+![Home Page](/public/IMG_0010.jpg)
 
-![Products Page](Images/IMG_0011.jpg)
+![Products Page](/public/IMG_0011.jpg)
 
-![Cart Page](Images/IMG_0012.jpg)
+![Cart Page](/public/IMG_0012.jpg)
 
-![Billing and Addres Page](Images/IMG_0013.jpg)
+![Billing and Addres Page](/public/IMG_0013.jpg)
 
 ### Key Features
 - Tracking past purchases

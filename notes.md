@@ -20,3 +20,17 @@ d# Notes
 ## CSS Notes
 
 1. If you have an id in your html you reference it in css by saying #(id name)
+
+## Vite & React Notes
+
+1. Use "npm run dev" to host the website to see changes live
+2. A component in JSX (React) is a function that returns something to the DOM which basically means it renders (changes) something on the screen
+3. An event listener is something that waits for an event to occur in javascript and then responds to it
+4. In JS/JSX {} curly braces destruct an object while [] square brackets destructure an array
+5. When a function says "default" it's a keyword that tells other files that use your code that this is the main function in your file.
+6. Importing 'react-dom/client' allows your code to talk to the web browsers (React DOM) to be able to render your code
+
+## API's
+
+1. Use public APIs: https://rapidapi.com/hub
+2. We can use APIs for our startup to do logins, logouts, get user, get scores, save scores, create account (all these for Simon, so it'll be a little different for startup)
