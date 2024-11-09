@@ -48,3 +48,10 @@
 - [x] Application elements: I used good contrast of white spaces with my css styling elements
 - [x] Application text content: Used text throughout the pages like in the home page
 - [x] Application images: Used product images and an image carousel
+
+### React Deliverable
+
+- [x] Bundled using Vite
+- [x] Multiple react elements that implement or mock the login, cart, products, and billing information pages
+- [x] React routers implemented
+- [x] React hooks
