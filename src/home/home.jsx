@@ -7,24 +7,30 @@ export function Home() {
     const [quoteAuthor, setQuoteAuthor] = useState('');
 
     useEffect(() => {
-        // Fetch the quote from the external API
-        fetch('https://quotes-inspirational-quotes-motivational-quotes.p.rapidapi.com/quote?token=ipworld.info', {
-            method: 'GET',
-            headers: {
-                'x-rapidapi-host': 'quotes-inspirational-quotes-motivational-quotes.p.rapidapi.com',
-                'x-rapidapi-key': '9db24a0080msh121ccc6c1888c35p1aa90bjsn65775fee3975'
-            }
-        })
+      const url = 'https://quotes-inspirational-quotes-motivational-quotes.p.rapidapi.com/quote?token=ipworld.info';
+      const options = {
+        method: 'GET',
+        headers: {
+          'x-rapidapi-key': '9db24a0080msh121ccc6c1888c35p1aa90bjsn65775fee3975',
+          'x-rapidapi-host': 'quotes-inspirational-quotes-motivational-quotes.p.rapidapi.com'
+        }
+      };
+      fetch('https://openwhyd.org/hot/electro?format=json')
         .then(response => response.json())
         .then(data => {
-            setQuote(data.quote); // Assuming the API returns a 'quote' field
-            setQuoteAuthor(data.author || 'Unknown'); // Assuming 'author' field, with fallback
+          if (data && data.quote) {
+            setQuote(data.quote);
+            setQuoteAuthor(data.author || 'Unknown');
+          } else {
+            setQuote('No quote available');
+            setQuoteAuthor('Unknown');
+          }
         })
         .catch(error => {
-            console.error('Error fetching the quote:', error);
+          console.error('Error fetching the quote:', error);
         });
-    }, []); // Empty dependency array so it runs only once when the component mounts
-
+    }, []);
+    
     return (
         <main>
             <div>
@@ -43,3 +49,4 @@ export function Home() {
         </main>
     );
 }
+
