@@ -1,3 +1,5 @@
+// src/login/LoginForm.jsx
+
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import './LoginForm.css';
@@ -9,14 +11,45 @@ export const LoginForm = ({ onLogin }) => {
   const [error, setError] = useState('');  // State to store error message
   const navigate = useNavigate();
 
-  const handleLogin = (e) => {
+  const handleAuth = async (endpoint) => {
+    try {
+      const response = await fetch(`/api/${endpoint}`, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({ username, password })
+      });
+
+      const data = await response.json();
+
+      if (!response.ok) {
+        setError(data.message || 'An error occurred.');
+        return;
+      }
+
+      if (endpoint === 'login') {
+        // Store the token in localStorage
+        localStorage.setItem('token', data.token);
+        onLogin(username);
+      } else if (endpoint === 'register') {
+        // Optionally, auto-login after registration
+        // Here, we'll just navigate to login page
+      }
+
+      navigate('/');
+    } catch (err) {
+      setError('Server error. Please try again later.');
+    }
+  };
+
+  const handleLoginSubmit = (e) => {
     e.preventDefault();
     if (!username || !password) {
       setError('Please enter both username and password.');
       return;
     }
-    onLogin(username);
-    navigate('/');
+    handleAuth('login');
   };
 
   const handleRegister = (e) => {
@@ -25,13 +58,12 @@ export const LoginForm = ({ onLogin }) => {
       setError('Please enter both username and password.');
       return;
     }
-    onLogin(username);
-    navigate('/');
+    handleAuth('register');
   };
 
   return (
     <div className='wrapper'>
-      <form className="login_only" onSubmit={handleLogin}>
+      <form className="login_only" onSubmit={handleLoginSubmit}>
         <h1>Login</h1>
         <div className='input-box'>
           <input
@@ -76,4 +108,3 @@ export const LoginForm = ({ onLogin }) => {
     </div>
   );
 };
-

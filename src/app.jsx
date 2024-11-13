@@ -1,4 +1,6 @@
-import React, { useRef, useState } from 'react';
+// src/App.jsx
+
+import React, { useRef, useState, useEffect } from 'react';
 import { BrowserRouter, NavLink, Route, Routes } from 'react-router-dom';
 import { LoginForm } from './login/LoginForm';
 import { Home } from './home/home';
@@ -21,12 +23,14 @@ export default function App() {
   };
 
   const handleLogin = (name) => {
+    // Decode token to get username if needed
     localStorage.setItem('userName', name);
     setUserName(name);
   };
 
   const handleLogout = () => {
     localStorage.removeItem('userName');
+    localStorage.removeItem('token'); // Remove the JWT token
     setUserName('');
   };
 
@@ -70,6 +74,17 @@ export default function App() {
       )
     );
   };
+
+  useEffect(() => {
+    // Optionally, verify token on app load
+    const token = localStorage.getItem('token');
+    if (token) {
+      // You can implement token verification here
+      // For simplicity, we'll assume the token is valid and extract the username
+      const payload = JSON.parse(atob(token.split('.')[1]));
+      setUserName(payload.username);
+    }
+  }, []);
 
   return (
     <BrowserRouter>
@@ -178,4 +193,5 @@ export default function App() {
     </BrowserRouter>
   );
 }
+
 
