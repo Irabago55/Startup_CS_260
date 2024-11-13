@@ -15,11 +15,12 @@ export function Home() {
           'x-rapidapi-host': 'quotes-inspirational-quotes-motivational-quotes.p.rapidapi.com'
         }
       };
-      fetch('https://openwhyd.org/hot/electro?format=json')
+      fetch(url, options)
         .then(response => response.json())
         .then(data => {
-          if (data && data.quote) {
-            setQuote(data.quote);
+          console.log(data)
+          if (data && data.text) {
+            setQuote(data.text);
             setQuoteAuthor(data.author || 'Unknown');
           } else {
             setQuote('No quote available');
