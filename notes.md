@@ -34,3 +34,7 @@ d# Notes
 
 1. Use public APIs: https://rapidapi.com/hub
 2. We can use APIs for our startup to do logins, logouts, get user, get scores, save scores, create account (all these for Simon, so it'll be a little different for startup)
+
+## Terminal
+
+1. If you type history and then type !# with the number of the command it shows it will do that command
