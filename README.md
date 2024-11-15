@@ -55,3 +55,11 @@
 - [x] Multiple react elements that implement or mock the login, cart, products, and billing information pages
 - [x] React routers implemented
 - [x] React hooks
+
+### Service Deliverable
+
+- [x] Created an HTTP service using Node.js and Express
+- [x] The frontend is served up using express static middleware
+- [x] Frontend does calls a third-party service endpoint to display a motivational quote
+- [x] My backend does provide service endpoints
+- [x] My frontend calls my backend service endpoints
