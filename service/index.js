@@ -5,7 +5,7 @@ const jwt = require('jsonwebtoken');
 const path = require('path');
 
 const app = express();
-const PORT = 3000;
+const PORT = 4000;
 const JWT_SECRET = 'BCE7DCB2ACAC6B5994D3CB34C2B3C'; // Use env variables in production
 
 // Middleware
@@ -70,7 +70,7 @@ function authenticateToken(req, res, next) {
 }
 
 // Serve the frontend
-const buildPath = path.join(__dirname, '../dist'); // Adjust path if needed
+const buildPath = path.join(__dirname, './public'); // Adjust path if needed
 app.use(express.static(buildPath));
 
 // Fallback for React Router
