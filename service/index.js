@@ -15,7 +15,7 @@ app.use(express.json());
 // In-memory user store (for demonstration purposes)
 const users = [];
 
-// Register Endpoint
+// Register Endpoints
 app.post('/api/register', async (req, res) => {
   const { username, password } = req.body;
 
