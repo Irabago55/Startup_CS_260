@@ -8,3 +8,13 @@ const db = client.db('startup');
 const userCollection = db.collection('user');
 const cartCollection = db.collection('cart');
 const orderCollection = db.collection('orders');
+
+(async function testConnection() {
+    await client.connect();
+    await db.command({ ping: 1 });
+  })().catch((ex) => {
+    console.log(`Unable to connect to database with ${url} because ${ex.message}`);
+    process.exit(1);
+  });
+
+  
