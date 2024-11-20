@@ -14,23 +14,30 @@ app.use(cors());
 app.use(express.json());
 
 // In-memory user store (for demonstration purposes)
-const users = [];
+// const users = [];
 
-// Register Endpoints
+app.get('/api/register', async (req, res) => {
+  return res.status(200).json({ message: 'happy' });
+})
+
+// Register Endpoint
 app.post('/api/register', async (req, res) => {
-  const { username, password } = req.body;
+  const { email, password } = req.body;
 
-  if (!username || !password) {
-    return res.status(400).json({ message: 'Username and password are required.' });
+  if (!email || !password) {
+    return res.status(400).json({ message: 'email and password are required.' });
   }
 
-  const existingUser = users.find(user => user.username === username);
+  // const existingUser = users.find(user => user.username === username);
+  const existingUser = await DB.getUser(req.body.email);
   if (existingUser) {
-    return res.status(409).json({ message: 'Username already exists.' });
+    console.log(existingUser)
+    return res.status(409).json({ message: 'email already exists.' });
   }
 
   const hashedPassword = await bcrypt.hash(password, 10);
-  users.push({ username, password: hashedPassword });
+  // users.push({ username, password: hashedPassword });
+  const user = await DB.addUser(req.body.email, hashedPassword)
   return res.status(201).json({ message: 'User registered successfully.' });
 });
 

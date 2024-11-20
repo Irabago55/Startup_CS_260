@@ -7,7 +7,6 @@ const client = new MongoClient(url);
 const db = client.db('startup');
 const userCollection = db.collection('user');
 const cartCollection = db.collection('cart');
-const orderCollection = db.collection('orders');
 
 (async function testConnection() {
     await client.connect();
@@ -17,4 +16,21 @@ const orderCollection = db.collection('orders');
     process.exit(1);
   });
 
-  
+  function getUser(email) {
+    return userCollection.findOne({ email: email });
+  }
+
+  async function addUser(email, password) {
+    const user = {
+        email: email,
+        password: password,
+        cart: []
+    }
+    await userCollection.insertOne(user);
+  }
+
+
+  module.exports = {
+    addUser,
+    getUser
+  }
