@@ -16,9 +16,9 @@ app.use(express.json());
 // In-memory user store (for demonstration purposes)
 // const users = [];
 
-app.get('/api/register', async (req, res) => {
-  return res.status(200).json({ message: 'happy' });
-})
+// app.get('/api/register', async (req, res) => {
+//   return res.status(200).json({ message: 'happy' });
+// })
 
 // Register Endpoint
 app.post('/api/register', async (req, res) => {
@@ -43,24 +43,31 @@ app.post('/api/register', async (req, res) => {
 
 // Login Endpoint
 app.post('/api/login', async (req, res) => {
-  const { username, password } = req.body;
-
-  if (!username || !password) {
-    return res.status(400).json({ message: 'Username and password are required.' });
+  const user = await DB.getUser(req.body.email);
+  if (user) {
+    if (await bcrypt.compare(req.body.password, user.password)) {
+      return res.status(201).json({ message: 'User successfully logged in.'});
+    }
   }
+  res.status(401).send({ msg: 'Unauthorized' });
+  // const { username, password } = req.body;
 
-  const user = users.find(user => user.username === username);
-  if (!user) {
-    return res.status(401).json({ message: 'Invalid credentials.' });
-  }
+  // if (!username || !password) {
+  //   return res.status(400).json({ message: 'Username and password are required.' });
+  // }
 
-  const isMatch = await bcrypt.compare(password, user.password);
-  if (!isMatch) {
-    return res.status(401).json({ message: 'Invalid credentials.' });
-  }
+  // const user = users.find(user => user.username === username);
+  // if (!user) {
+  //   return res.status(401).json({ message: 'Invalid credentials.' });
+  // }
 
-  const token = jwt.sign({ username }, JWT_SECRET, { expiresIn: '1h' });
-  return res.status(200).json({ message: 'Login successful.', token });
+  // const isMatch = await bcrypt.compare(password, user.password);
+  // if (!isMatch) {
+  //   return res.status(401).json({ message: 'Invalid credentials.' });
+  // }
+
+  // const token = jwt.sign({ username }, JWT_SECRET, { expiresIn: '1h' });
+  // return res.status(200).json({ message: 'Login successful.', token });
 });
 
 // Middleware to authenticate token

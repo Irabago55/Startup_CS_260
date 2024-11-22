@@ -6,7 +6,7 @@ import './LoginForm.css';
 import { FaUserAlt, FaLock } from "react-icons/fa";
 
 export const LoginForm = ({ onLogin }) => {
-  const [username, setUsername] = useState('');
+  const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [error, setError] = useState('');  // State to store error message
   const navigate = useNavigate();
@@ -18,7 +18,7 @@ export const LoginForm = ({ onLogin }) => {
         headers: {
           'Content-Type': 'application/json'
         },
-        body: JSON.stringify({ username, password })
+        body: JSON.stringify({ email, password })
       });
 
       const data = await response.json();
@@ -31,7 +31,7 @@ export const LoginForm = ({ onLogin }) => {
       if (endpoint === 'login') {
         // Store the token in localStorage
         localStorage.setItem('token', data.token);
-        onLogin(username);
+        onLogin(email);
       } else if (endpoint === 'register') {
         // Optionally, auto-login after registration
         // Here, we'll just navigate to login page
@@ -45,8 +45,8 @@ export const LoginForm = ({ onLogin }) => {
 
   const handleLoginSubmit = (e) => {
     e.preventDefault();
-    if (!username || !password) {
-      setError('Please enter both username and password.');
+    if (!email || !password) {
+      setError('Please enter both email and password.');
       return;
     }
     handleAuth('login');
@@ -54,8 +54,8 @@ export const LoginForm = ({ onLogin }) => {
 
   const handleRegister = (e) => {
     e.preventDefault();
-    if (!username || !password) {
-      setError('Please enter both username and password.');
+    if (!email || !password) {
+      setError('Please enter both email and password.');
       return;
     }
     handleAuth('register');
@@ -68,11 +68,11 @@ export const LoginForm = ({ onLogin }) => {
         <div className='input-box'>
           <input
             type='text'
-            placeholder='Username'
+            placeholder='Email'
             required
-            value={username}
+            value={email}
             onChange={(e) => {
-              setUsername(e.target.value);
+              setEmail(e.target.value);
               setError(''); // Clear error on input change
             }}
           />
