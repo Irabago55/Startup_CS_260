@@ -63,3 +63,11 @@
 - [x] Frontend does calls a third-party service endpoint to display a motivational quote
 - [x] My backend does provide service endpoints
 - [x] My frontend calls my backend service endpoints
+
+### Login Deliverable
+
+- [x] Supports new user registration
+- [x] Supports existing user authentication and logout
+- [x] Stores application data in MongoDB
+- [x] Stores and retrieves credentials in MongoDB
+- [ ] Restricts application functionality based upon authentication
