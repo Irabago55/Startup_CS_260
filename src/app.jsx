@@ -108,6 +108,13 @@ export default function App() {
                     </span>
                   </li>
                 )}
+                {isAuthenticated && (
+                  <li className="nav-item">
+                    <NavLink className="nav-link" to="websocket">
+                      Chat
+                    </NavLink>
+                  </li>
+                )}
                 <li className="nav-item">
                   <NavLink className="nav-link" to="">
                     Home
@@ -150,6 +157,7 @@ export default function App() {
               />
             }
           />
+          <Route path="/websocket" element={<WebSocket />}/>
           <Route
             path="/billing"
             element={
