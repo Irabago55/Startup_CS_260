@@ -9,7 +9,11 @@ export function WebSocketChat() {
   const [chatMessages, setChatMessages] = useState([]);
 
   useEffect(() => {
-    const ws = new WebSocket('ws://localhost:5001'); // Adjust to your server's WebSocket URL
+    // const ws = new WebSocket('ws://localhost:5001'); // Adjust to your server's WebSocket URL
+    let port = window.location.port;
+    const protocol = window.location.protocol === 'http:' ? 'ws' : 'wss';
+    const ws = new WebSocket(`${protocol}://${window.location.hostname}:${port}/ws`);
+
     setSocket(ws);
 
     ws.onmessage = (event) => {

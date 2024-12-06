@@ -2,8 +2,14 @@ const { WebSocketServer } = require('ws');
 const uuid = require('uuid');
 
 function websocketChat(server) {
-  const wss = new WebSocketServer({ server });
+  const wss = new WebSocketServer({ noServer: true });
   const clients = new Map();
+
+  server.on('upgrade', (request, socket, head) => {
+    wss.handleUpgrade(request, socket, head, function done(ws) {
+      wss.emit('connection', ws, request);
+    });
+  });
 
   wss.on('connection', (ws) => {
     const clientId = uuid.v4();

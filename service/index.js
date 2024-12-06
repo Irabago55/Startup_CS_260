@@ -9,8 +9,8 @@ const DB = require('./database.js');
 const { websocketChat } = require('./websocketChat.js');
 
 const app = express();
-const PORT = 4000;
-const websocket_port = 5001;
+const PORT = process.argv.length > 2 ? process.argv[2] : 4000;
+// const websocket_port = 5001;
 const JWT_SECRET = 'BCE7DCB2ACAC6B5994D3CB34C2B3C'; // Use env variables in production
 
 // Middleware
@@ -49,40 +49,21 @@ app.post('/api/login', async (req, res) => {
   res.status(401).send({ msg: 'Unauthorized' });
 });
 
-// Middleware to authenticate token
-// function authenticateToken(req, res, next) {
-//   const authHeader = req.headers['authorization'];
-//   const token = authHeader && authHeader.split(' ')[1];
-
-//   if (!token) return res.status(401).json({ message: 'Access token required.' });
-
-//   jwt.verify(token, JWT_SECRET, (err, user) => {
-//     if (err) return res.status(403).json({ message: 'Invalid token.' });
-//     req.user = user;
-//     next();
-//   });
-// }
-
 // Serve the frontend
-const htmlPath = path.join(__dirname, 'index.html'); // Adjust path if needed
-app.use(express.static(htmlPath));
+const buildPath = path.join(__dirname, './public'); // Adjust path if needed
+app.use(express.static(buildPath));
 
 // Fallback for React Router
 app.get('*', (req, res) => {
-  res.sendFile(htmlPath);
-});
-
-// Start the server
-app.listen(PORT, () => {
-  console.log(`Backend server is running on http://localhost:${PORT}`);
+  res.sendFile(path.join(buildPath, 'index.html'));
 });
 
 
 // Creating WebSocket Server
 
 // Attach WebSocket server to your Express server
-const httpServer = app.listen(websocket_port, () => {
-  console.log(`Server running at http://localhost:${websocket_port}`);
+const httpServer = app.listen(PORT, () => {
+  console.log(`Server running at port ${PORT}`);
 });
 
 websocketChat(httpServer);
