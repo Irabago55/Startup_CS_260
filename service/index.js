@@ -50,18 +50,18 @@ app.post('/api/login', async (req, res) => {
 });
 
 // Middleware to authenticate token
-function authenticateToken(req, res, next) {
-  const authHeader = req.headers['authorization'];
-  const token = authHeader && authHeader.split(' ')[1];
+// function authenticateToken(req, res, next) {
+//   const authHeader = req.headers['authorization'];
+//   const token = authHeader && authHeader.split(' ')[1];
 
-  if (!token) return res.status(401).json({ message: 'Access token required.' });
+//   if (!token) return res.status(401).json({ message: 'Access token required.' });
 
-  jwt.verify(token, JWT_SECRET, (err, user) => {
-    if (err) return res.status(403).json({ message: 'Invalid token.' });
-    req.user = user;
-    next();
-  });
-}
+//   jwt.verify(token, JWT_SECRET, (err, user) => {
+//     if (err) return res.status(403).json({ message: 'Invalid token.' });
+//     req.user = user;
+//     next();
+//   });
+// }
 
 // Serve the frontend
 const buildPath = path.join(__dirname, './public'); // Adjust path if needed
