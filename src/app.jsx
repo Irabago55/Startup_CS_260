@@ -7,6 +7,7 @@ import { Home } from './home/home';
 import { Products } from './products/products';
 import { Cart } from './cart/cart';
 import { Billing } from './billing/billing';
+import { WebSocketChat } from './websocket/websocket';
 
 import './App.css';
 
@@ -75,16 +76,16 @@ export default function App() {
     );
   };
 
-  useEffect(() => {
-    // Optionally, verify token on app load
-    const token = localStorage.getItem('token');
-    if (token) {
-      // You can implement token verification here
-      // For simplicity, we'll assume the token is valid and extract the username
-      const payload = JSON.parse(atob(token.split('.')[1]));
-      setUserName(payload.username);
-    }
-  }, []);
+  // useEffect(() => {
+  //   // Optionally, verify token on app load
+  //   const token = localStorage.getItem('token');
+  //   if (token) {
+  //     // You can implement token verification here
+  //     // For simplicity, we'll assume the token is valid and extract the username
+  //     const payload = JSON.parse(atob(token.split('.')[1]));
+  //     setUserName(payload.username);
+  //   }
+  // }, []);
 
   return (
     <BrowserRouter>
@@ -157,7 +158,7 @@ export default function App() {
               />
             }
           />
-          <Route path="/websocket" element={<WebSocket />}/>
+          <Route path="/websocket" element={<WebSocketChat />}/>
           <Route
             path="/billing"
             element={

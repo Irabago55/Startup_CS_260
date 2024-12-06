@@ -92,10 +92,10 @@ export const LoginForm = ({ onLogin }) => {
           <FaLock className='icon' />
         </div>
 
-        <div className='remember-forgot'>
+        {/* <div className='remember-forgot'>
           <label><input type='checkbox'/>Remember me</label>
           <a href="#">Forgot password?</a>
-        </div>
+        </div> */}
 
         <button type="submit">Login</button>
 

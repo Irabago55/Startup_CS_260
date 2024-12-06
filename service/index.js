@@ -1,12 +1,16 @@
+// service/index.js
+
 const express = require('express');
 const cors = require('cors');
 const bcrypt = require('bcryptjs');
 const jwt = require('jsonwebtoken');
 const path = require('path');
 const DB = require('./database.js');
+const { websocketChat } = require('./websocketChat.js');
 
 const app = express();
 const PORT = 4000;
+const websocket_port = 5001;
 const JWT_SECRET = 'BCE7DCB2ACAC6B5994D3CB34C2B3C'; // Use env variables in production
 
 // Middleware
@@ -97,3 +101,44 @@ app.get('*', (req, res) => {
 app.listen(PORT, () => {
   console.log(`Backend server is running on http://localhost:${PORT}`);
 });
+
+
+// Creating WebSocket Server
+
+// Attach WebSocket server to your Express server
+const httpServer = app.listen(websocket_port, () => {
+  console.log(`Server running at http://localhost:${websocket_port}`);
+});
+
+websocketChat(httpServer);
+
+// const wss = new websocketChat({ port: 5001 });
+
+// wss.on('connection', (ws) => {
+//   console.log('New client connected');
+
+//   // Show messages to all the customers who logged in
+//   ws.on('message', (message) => {
+//     console.log(`Received: ${message}`);
+//     wss.clients.forEach((client) => {
+//       if (client.readyState === ws.OPEN) {
+//         client.send(message);
+//       }
+//     });
+//   });
+
+//   ws.on('close', () => {
+//     console.log('Client disconnected');
+//   });
+// });
+
+// console.log('WebSocket Server is running on ws://localhost:5001');
+
+// websocketChat(wss)
+
+// window.React1 = require('react');
+
+// // Add this in your component file
+// require('react-dom');
+// window.React2 = require('react');
+// console.log(window.React1 === window.React2);
