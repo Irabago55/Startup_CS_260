@@ -70,4 +70,8 @@
 - [x] Supports existing user authentication and logout
 - [x] Stores application data in MongoDB
 - [x] Stores and retrieves credentials in MongoDB
-- [ ] Restricts application functionality based upon authentication
+- [x] Restricts application functionality based upon authentication because the chat button appears after logging in
+
+### Websocket Deliverable
+
+- [ ]  
