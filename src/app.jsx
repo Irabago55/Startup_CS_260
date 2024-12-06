@@ -76,17 +76,6 @@ export default function App() {
     );
   };
 
-  // useEffect(() => {
-  //   // Optionally, verify token on app load
-  //   const token = localStorage.getItem('token');
-  //   if (token) {
-  //     // You can implement token verification here
-  //     // For simplicity, we'll assume the token is valid and extract the username
-  //     const payload = JSON.parse(atob(token.split('.')[1]));
-  //     setUserName(payload.username);
-  //   }
-  // }, []);
-
   return (
     <BrowserRouter>
       <div className="App">

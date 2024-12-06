@@ -17,13 +17,6 @@ const JWT_SECRET = 'BCE7DCB2ACAC6B5994D3CB34C2B3C'; // Use env variables in prod
 app.use(cors());
 app.use(express.json());
 
-// In-memory user store (for demonstration purposes)
-// const users = [];
-
-// app.get('/api/register', async (req, res) => {
-//   return res.status(200).json({ message: 'happy' });
-// })
-
 // Register Endpoint
 app.post('/api/register', async (req, res) => {
   const { email, password } = req.body;
@@ -54,24 +47,6 @@ app.post('/api/login', async (req, res) => {
     }
   }
   res.status(401).send({ msg: 'Unauthorized' });
-  // const { username, password } = req.body;
-
-  // if (!username || !password) {
-  //   return res.status(400).json({ message: 'Username and password are required.' });
-  // }
-
-  // const user = users.find(user => user.username === username);
-  // if (!user) {
-  //   return res.status(401).json({ message: 'Invalid credentials.' });
-  // }
-
-  // const isMatch = await bcrypt.compare(password, user.password);
-  // if (!isMatch) {
-  //   return res.status(401).json({ message: 'Invalid credentials.' });
-  // }
-
-  // const token = jwt.sign({ username }, JWT_SECRET, { expiresIn: '1h' });
-  // return res.status(200).json({ message: 'Login successful.', token });
 });
 
 // Middleware to authenticate token
@@ -111,34 +86,3 @@ const httpServer = app.listen(websocket_port, () => {
 });
 
 websocketChat(httpServer);
-
-// const wss = new websocketChat({ port: 5001 });
-
-// wss.on('connection', (ws) => {
-//   console.log('New client connected');
-
-//   // Show messages to all the customers who logged in
-//   ws.on('message', (message) => {
-//     console.log(`Received: ${message}`);
-//     wss.clients.forEach((client) => {
-//       if (client.readyState === ws.OPEN) {
-//         client.send(message);
-//       }
-//     });
-//   });
-
-//   ws.on('close', () => {
-//     console.log('Client disconnected');
-//   });
-// });
-
-// console.log('WebSocket Server is running on ws://localhost:5001');
-
-// websocketChat(wss)
-
-// window.React1 = require('react');
-
-// // Add this in your component file
-// require('react-dom');
-// window.React2 = require('react');
-// console.log(window.React1 === window.React2);
