@@ -64,12 +64,12 @@ app.post('/api/login', async (req, res) => {
 // }
 
 // Serve the frontend
-const buildPath = path.join(__dirname, './public'); // Adjust path if needed
-app.use(express.static(buildPath));
+const htmlPath = path.join(__dirname, 'index.html'); // Adjust path if needed
+app.use(express.static(htmlPath));
 
 // Fallback for React Router
 app.get('*', (req, res) => {
-  res.sendFile(path.join(buildPath, 'index.html'));
+  res.sendFile(htmlPath);
 });
 
 // Start the server
