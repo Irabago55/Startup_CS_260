@@ -5,11 +5,11 @@ import "./products.css";
 export function Products({ addToCart }) {
     const products = [
         { id: 1, name: "Pineapple Hair Growth Oil", price: 25.00, image: "/pineapple_900x.jpeg" },
-        { id: 2, name: "Coconut Oil", price: 30.00, image: "/pineapple_900x.jpeg" },
-        { id: 3, name: "Avocado Oil", price: 25.00, image: "/pineapple_900x.jpeg" },
-        { id: 4, name: "Jelly Face Cleanser", price: 25.00, image: "/pineapple_900x.jpeg" },
-        { id: 5, name: "Biotin Gummies", price: 25.00, image: "/pineapple_900x.jpeg"},
-        { id: 6, name: "Sun Screen", price: 25.00, image: "/pineapple_900x.jpeg"}
+        { id: 2, name: "Rose Quartz Mist", price: 30.00, image: "/rosequartz_900x.jpeg" },
+        { id: 3, name: "Rapid Age Defyer", price: 25.00, image: "/RapidAgeDefyer_900x.jpeg" },
+        { id: 4, name: "Jelly Face Cleanser", price: 25.00, image: "/Jellyfacecleanser_900x.jpeg" },
+        { id: 5, name: "Biotin Gummies", price: 25.00, image: "/Gummies_900x.jpeg"},
+        { id: 6, name: "Sun Screen", price: 25.00, image: "/collagenSunscreen_900x.jpeg"}
         // Add more products with image paths here
     ];
 

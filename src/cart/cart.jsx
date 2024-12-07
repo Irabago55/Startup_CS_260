@@ -9,8 +9,8 @@ export function Cart({ cartItems, calculateTotals, addToCart, removeFromCart, in
 
     const { subtotal, shipping, tax, total } = calculateTotals();
     const recommendedProducts = [
-        { id: 4, name: "Argan Oil", price: 30.00, image: "/pineapple_900x.jpeg"},
-        { id: 5, name: "Jojoba Oil", price: 25.00, image: "/pineapple_900x.jpeg" },
+        { id: 4, name: "Rose Quartz Mist", price: 30.00, image: "/rosequartz_900x.jpeg"},
+        { id: 5, name: "Biotin Gummies", price: 25.00, image: "/Gummies_900x.jpeg" },
         // Add more recommended products here
     ];
     
