@@ -74,4 +74,8 @@
 
 ### Websocket Deliverable
 
-- [ ]  
+- [x]  Backend listens for WebSocket Connection
+- [x]  Frontend makes WebSocket Connection
+- [x]  Data sent over WebSocket Connection (the messages from customers)
+- [x]  WebSocket data displayed in the application interface (messages from customers are displayed)
+- [x]  All visible elements are working
